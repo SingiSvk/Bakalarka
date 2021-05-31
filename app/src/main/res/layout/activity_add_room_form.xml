@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginVertical="5dp"
+        android:textAlignment="center"
+        android:text="@string/room_name_form"
+        tools:ignore="TextViewEdits" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_room_room_name"
+        android:textAlignment="center"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        android:hint="@string/room_name"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginVertical="5dp"
+        android:textAlignment="center"
+        android:text="@string/pacient_form"
+        tools:ignore="TextViewEdits" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_room_patient_name"
+        android:textAlignment="center"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        android:hint="@string/patient_name"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_room_patient_age"
+        android:textAlignment="center"
+        android:inputType="number"
+        android:importantForAutofill="no"
+        android:hint="@string/patient_age"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/add"
+            android:layout_margin="15dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/add_room"
+            tools:ignore="ButtonStyle,MissingConstraints"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:layout_margin="15dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/cancel_button"
+            tools:ignore="ButtonStyle,MissingConstraints"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    android:layout_centerInParent="true"
+    android:padding="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/all_rooms_btn"
+            android:layout_width="162dp"
+            android:layout_height="162dp"
+            android:layout_margin="15sp"
+            android:alpha="0.3"
+            android:background="@drawable/bed"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/all_rooms" />
+
+        <TextView
+            android:layout_width="101dp"
+            android:layout_height="81dp"
+            android:layout_alignStart="@+id/all_rooms_btn"
+            android:layout_alignTop="@+id/all_rooms_btn"
+            android:layout_alignEnd="@+id/all_rooms_btn"
+            android:layout_alignBottom="@+id/all_rooms_btn"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:text="@string/vsetky_izby"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@+id/all_rooms_btn"
+            app:layout_constraintEnd_toEndOf="@+id/all_rooms_btn"
+            app:layout_constraintStart_toStartOf="@+id/all_rooms_btn"
+            app:layout_constraintTop_toTopOf="@+id/all_rooms_btn" />
+
+        <ImageView
+            android:id="@+id/risky_rooms_btn"
+            android:layout_width="162dp"
+            android:layout_height="162dp"
+            android:layout_gravity="center"
+            android:layout_margin="15sp"
+
+            android:alpha="0.3"
+            android:background="@drawable/ic_priority_high_black_24dp"
+            android:text="@string/rizikove_izby"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/all_rooms_btn"
+            android:contentDescription="@string/risky_rooms" />
+
+        <TextView
+            android:layout_width="101dp"
+            android:layout_height="81dp"
+            android:layout_alignStart="@+id/all_rooms_btn"
+            android:layout_alignTop="@+id/all_rooms_btn"
+            android:layout_alignEnd="@+id/all_rooms_btn"
+            android:layout_alignBottom="@+id/all_rooms_btn"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:text="@string/rizikove_izby"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@+id/risky_rooms_btn"
+            app:layout_constraintEnd_toEndOf="@+id/risky_rooms_btn"
+            app:layout_constraintStart_toStartOf="@+id/risky_rooms_btn"
+            app:layout_constraintTop_toTopOf="@+id/risky_rooms_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/general_events"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
