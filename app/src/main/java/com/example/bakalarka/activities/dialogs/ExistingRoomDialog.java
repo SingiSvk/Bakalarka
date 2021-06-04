@@ -9,7 +9,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 
 import com.example.bakalarka.R;
+import com.example.bakalarka.activities.MainActivity;
 import com.example.bakalarka.activities.addRoom.AddRoomFormActivity;
+import com.example.bakalarka.activities.overview.OverviewAllRoomsActivity;
 import com.example.bakalarka.data.room.RoomController;
 
 import org.jetbrains.annotations.NotNull;
@@ -42,7 +44,9 @@ public class ExistingRoomDialog extends DialogFragment {
                     getActivity().finish();
                 })
                 .setNegativeButton(R.string.cancel, (dialog, id) -> {
-                    // User cancelled the dialog
+                    Intent intent = new Intent(getActivity().getApplicationContext(), OverviewAllRoomsActivity.class);
+                    startActivity(intent);
+                    getActivity().finish();
                 });
         return builder.create();
     }

@@ -48,15 +48,11 @@ public class QRCodeScanner extends AppCompatActivity {
                 String[] scannerData = result.getContents().split("=");
                 int roomId = Integer.parseInt(scannerData[1]);
 
-                if(new RoomController().containsRoom(roomId)){
-                    ExistingRoomDialog existingRoomDialog = ExistingRoomDialog.newInstance(roomId);
-                    existingRoomDialog.show(getSupportFragmentManager(), "Existing room");
-                }else{
-                    Intent intent = new Intent(getApplicationContext(), AddRoomFormActivity.class);
-                    intent.putExtra("roomId", roomId);
-                    startActivity(intent);
-                    finish();
-                }
+                Intent intent = new Intent(getApplicationContext(), AddRoomFormActivity.class);
+                intent.putExtra("roomId", roomId);
+                startActivity(intent);
+                finish();
+
             }else{
                 Toast.makeText(this, "No Result", Toast.LENGTH_LONG).show();
             }

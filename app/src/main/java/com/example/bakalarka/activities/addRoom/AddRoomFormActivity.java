@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.bakalarka.R;
+import com.example.bakalarka.activities.dialogs.ExistingRoomDialog;
 import com.example.bakalarka.activities.overview.OverviewAllRoomsActivity;
 import com.example.bakalarka.data.MyService;
 import com.example.bakalarka.data.room.Room;
@@ -23,6 +24,12 @@ public class AddRoomFormActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_room_form);
 
         int roomId = getIntent().getIntExtra("roomId", 0);
+
+        if(new RoomController().containsRoom(roomId)){
+            ExistingRoomDialog existingRoomDialog = ExistingRoomDialog.newInstance(roomId);
+            existingRoomDialog.show(getSupportFragmentManager(), "Existing room");
+        }
+
         findViewById(R.id.add_room).setOnClickListener(v -> {
             createRoom(roomId);
             Intent intent = new Intent(getApplicationContext(), OverviewAllRoomsActivity.class);
