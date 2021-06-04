@@ -1,4 +1,4 @@
-# Android aplikácia pre monitorovanie ľudí odkázaných na starostlivosť
+# Android aplikácia pre monitoring ľudí odkázaných na starostlivosť
  
 # Inštalácia
 
